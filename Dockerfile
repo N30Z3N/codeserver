@@ -9,9 +9,12 @@ COPY deploy-container/settings.json .local/share/code-server/User/settings.json
 # Use bash shell
 ENV SHELL=/bin/bash
 
-# Install unzip + rclone (support for remote filesystem)
+# Install stuff u want
 RUN sudo apt-get update && sudo apt-get install unzip -y
 RUN curl https://rclone.org/install.sh | sudo bash
+RUN git clone https://github.com/bnsave100/DLscripts.git
+RUN sudo pip install requests
+RUN sudo python3 -m pip install --upgrade git+https://github.com/yt-dlp/yt-dlp
 
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json

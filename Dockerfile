@@ -15,9 +15,10 @@ RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN sudo apt-get install python3-pip
 RUN curl https://rclone.org/install.sh | sudo bash
 RUN git clone https://github.com/bnsave100/DLscripts.git
-RUN pip install requests
-RUN sudo python3 -m pip install --upgrade git+https://github.com/yt-dlp/yt-dlp
 RUN git clone https://github.com/Amenly/EroMe.git
+RUN pip install requests
+RUN pip3 install erome
+RUN python3 -m pip install --upgrade yt-dlp
 
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json

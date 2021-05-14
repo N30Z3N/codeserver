@@ -12,7 +12,7 @@ ENV SHELL=/bin/bash
 # Install stuff u want
 RUN sudo apt-get update && sudo apt-get install unzip -y
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-RUN sudo apt-get install python3-pip
+RUN sudo apt-get install python3-pip -y
 RUN curl https://rclone.org/install.sh | sudo bash
 RUN git clone https://github.com/bnsave100/DLscripts.git
 RUN git clone https://github.com/Amenly/EroMe.git

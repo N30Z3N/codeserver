@@ -16,7 +16,7 @@ RUN sudo apt-get install python3-pip -y
 RUN curl https://rclone.org/install.sh | sudo bash
 RUN git clone https://github.com/bnsave100/DLscripts.git
 RUN git clone https://github.com/Amenly/EroMe.git
-RUN pip install requests
+RUN python3 -m pip install requests
 RUN pip3 install erome
 RUN python3 -m pip install --upgrade yt-dlp -y
 

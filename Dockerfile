@@ -18,7 +18,7 @@ RUN git clone https://github.com/bnsave100/DLscripts.git
 RUN git clone https://github.com/Amenly/EroMe.git
 RUN pip install requests
 RUN pip3 install erome
-RUN python3 -m pip install --upgrade yt-dlp
+RUN python3 -m pip install --upgrade yt-dlp -y
 
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json

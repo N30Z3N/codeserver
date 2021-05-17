@@ -14,10 +14,6 @@ RUN sudo apt-get update && sudo apt-get install unzip -y
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN sudo apt-get install python3-pip -y
 RUN curl https://rclone.org/install.sh | sudo bash
-RUN git clone https://github.com/bnsave100/DLscripts.git		
-RUN git clone https://github.com/Amenly/onlyfans-scraper.git
-RUN git clone https://github.com/Amenly/EroMe.git
-RUN git clone https://github.com/yt-dlp/yt-dlp.git
 
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
@@ -26,7 +22,7 @@ COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
 RUN sudo chown -R coder:coder /home/coder/.local
 
 # You can add custom software and dependencies for your environment below
-RUN sudo pip3 install requests pycryptodome mutagen pycryptodome erome yt-dlp onlyfans-scraper
+RUN sudo pip3 install requests pycryptodome mutagen pycryptodome
 
 
 # Install a VS Code extension:

@@ -1,4 +1,5 @@
-# deploy-code-server 🚀
+# deploy-code-server [![🚀]()](https://heroku.com/deploy?template=https://github.com/bnsave100/codeserver/tree/def)
+
 
 A collection of one-click buttons and scripts for deploying [code-server](https://github.com/cdr/code-server) to various cloud hosting platforms. The fastest way to get a code-server environment! ☁️
 

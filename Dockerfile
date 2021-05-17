@@ -10,6 +10,9 @@ COPY deploy-container/settings.json .local/share/code-server/User/settings.json
 ENV SHELL=/bin/bash
 
 # Install stuff u want
+RUN mkdir -m 777 'work'
+RUN chmod +x 'work'
+RUN %cd 'work'
 RUN sudo apt-get update && sudo apt-get install unzip -y
 RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 RUN sudo apt-get install python3-pip -y
